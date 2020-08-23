@@ -20,4 +20,62 @@ while True:
 
     print("user choice is: " + choice_name)
     print("\nNow its computer turn.......")
+    comp_choice = random.randint(1, 3)
 
+    if comp_choice == 1:
+        comp_choice_name = 'Rock'
+    elif comp_choice == 2:
+        comp_choice_name = 'Paper'
+    else:
+        comp_choice_name = 'Scissor'
+
+    print(f"Computer has chosen: {comp_choice_name}")
+    comp_count = 0
+    user_count = 0
+
+    while (comp_count < 3) and (user_count < 3):
+
+        if user_choice == 1 and comp_choice == 2:
+            comp_count += 1
+            print("Computer wins this round with Paper! "
+                  f"\n Computer: {comp_count}"
+                  f"\n You: {user_count} ")
+
+        elif user_choice == 1 and comp_choice == 3:
+            user_count += 1
+            print("You win this round with Rock!"
+                  f"\n Computer: {comp_count}"
+                  f"\n You: {user_count} ")
+
+        elif user_choice == 2 and comp_choice == 1:
+            user_count += 1
+            print("You win this round with Paper!"
+                  f"\n Computer: {comp_count}"
+                  f"\n You: {user_count} ")
+
+        elif user_choice == 2 and comp_choice == 3:
+            comp_count += 1
+            print("Computer wins this round with Scissor!"
+                  f"\n Computer: {comp_count}"
+                  f"\n You: {user_count} ")
+
+        elif user_choice == 3 and comp_choice == 2:
+            user_count += 1
+            print("You win this round with Scissor!"
+                  f"\n Computer: {comp_count}"
+                  f"\n You: {user_count} ")
+
+        elif user_choice == 3 and comp_choice == 1:
+            user_count += 1
+            print("Computer wins this round with Rock!"
+                  f"\n Computer: {comp_count}"
+                  f"\n You: {user_count} ")
+
+        else:
+            print(f"This round was a tie! Both choosing {user_choice_name}, try again!"
+                  f"\n Computer: {comp_count}"
+                  f"\n You: {user_count} ")
+    elif user_count == 2:
+        print('test1')
+    elif comp_count == 2:
+        print('test2')
